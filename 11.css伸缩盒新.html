@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11.css伸缩盒新</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 600px;
+            background-color: dimgrey;
+            display: -webkit-flex; /*变成盒子*/
+           /* -webkit-flex-direction:row-reverse; */
+            /* -webkit-flex-flow : wrap; */
+        }
+        .one{
+            width: 200px;
+            height: 100px;
+            background-color: aquamarine;
+            /* -webkit-flex-grow: 3; */
+            -webkit-order : 1;
+        }
+        .two{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* -webkit-flex-grow: 2; */
+            -webkit-order : 3;
+        }
+        .three{
+            width: 200px;
+            height: 100px;
+            background-color: palegreen;
+            /* -webkit-flex-grow: 1; */
+            -webkit-order : 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">  
+        <div class="one">d1</div>
+        <div class="two">d2</div>
+        <div class="three">d3</div>
+    </div>
+</body>
+</html>

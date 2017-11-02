@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10.css伸缩盒旧</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 600px;
+            background-color: dimgrey;
+            display: -webkit-box; /*变成盒子*/
+            /* -webkit-box-orient: vertical;
+            -webkit-box-pack: center;
+            -webkit-box-align: center; */
+            -webkit-box-direction:reverse;
+        }
+        .one{
+            width: 50px;
+            height: 100px;
+            background-color: aquamarine;
+            -webkit-box-flex: 3;
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            -webkit-box-flex: 2;
+        }
+        .three{
+            width: 100px;
+            height: 100px;
+            background-color: palegreen;
+            -webkit-box-flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">  
+        <div class="one">d1</div>
+        <div class="two">d2</div>
+        <div class="three">d3</div>
+    </div>
+</body>
+</html>

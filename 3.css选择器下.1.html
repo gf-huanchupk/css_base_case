@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.css选择器下</title>
+    <style>
+        /*三、属性选择器*/
+            /*当前元素[属性]{}*/
+            /*
+            a[href]{
+                font-size: 50px;
+            }*/
+
+            /*当前元素[属性="属性值"]{}*/
+            /*
+            a[href='https://www.baidu.com']{
+                font-size: 50px;
+            }*/
+
+        
+        /*伪类选择器*/
+            /*
+            ul li a{
+                font-size: 30px;
+            }
+            ul li a:link{
+                color:blue;
+            }
+            ul li a:visited{
+                color:grey;
+            }
+            ul li a:hover{
+                color:aqua;
+            }
+            ul li a:active{
+                color:red;
+            }*/
+
+        /*五、选择器的优先级*/
+            /* 1 */
+            span{
+                color: red;
+            }
+            /* 1+1 */
+            p span{
+                color: blue;
+            }
+            /* 1+10 */
+            p .sc{
+                color: aqua;
+            }
+            /* 1+100 */
+            p #si{
+                color: green;
+            }
+            /* 无穷大 */
+            span{
+                color: red !important;
+            }
+            
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#">百度一下</a>
+        <a>百度一下</a>
+        <a href="https://www.baidu.com">百度一下</a>
+        <a href="https://www.google.com">Google</a>
+        
+    </div>
+    <div>
+        <ul>
+            <li>
+                <a href="#">伪类选择器</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>
+            <span class="sc" id="si">优先级</span>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.css选择器上</title>
+    <style>
+        /*子元素选择器：父亲>儿子{}*/
+        /*
+        .container >p{
+            color:red;
+        }
+        */
+
+        /*包含选择器：E F{}*/
+        /*
+        .container p{
+            color:red;  
+        }*/
+
+        /*兄弟选择符：自己~兄弟*/
+        /*
+        p~h3{
+            color:red;
+        }*/
+
+        /*相邻选择器：E+F{}*/
+        
+        p+p{
+            color:red; 
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>这是一个标题</h3>
+        <p>这是一个文字段落</p>
+        <p>这是一个文字段落</p>
+        <h3>这是一个标题</h3>
+        <p>这是一个文字段落</p>
+        <h3>这是一个标题</h3>
+        <p>这是一个文字段落</p>
+        <p>这是一个文字段落</p>
+        <ul id="one">
+            <li>列表项目</li>
+            <li>
+                <ul>
+                    <li>列表项目</li>
+                    <li>列表项目</li>
+                    <li>列表项目</li>
+                    <li>列表项目</li>
+                </ul>
+            </li>
+            <li>列表项目</li>
+            <li>列表项目</li>
+        </ul>
+        <div>
+            <p>这是一个文字段落</p>
+        </div>
+    </div>
+</body>
+</html>

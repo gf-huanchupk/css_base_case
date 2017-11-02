@@ -1,0 +1,202 @@
+css 选择器
+一、元素选择符
+      1. 通配符：*{}
+      2. 类选择器：.类名{}
+      3. id选择器：#id名{}
+      4. 标签选择符：标签{}
+
+二、关系选择符
+      1. 子元素选择器：父亲>儿子{}
+      2. 兄弟选择符：自己~兄弟{}
+      3. 相邻选择器：E+F{}
+      4. 包含选择器：E F{}
+
+三、属性选择符
+      1. 当前元素[属性]{}
+      2. 当前元素[属性="属性值"]{}
+
+四、伪类选择器
+      1. 设置超链接a在未被访问前的样式：元素:link{}
+      2. 设置超链接a在被访问后的样式: 元素:visited{}
+      3. 是指超链接a在鼠标悬停时的样式: 元素:hover{}
+      4. 是指超链接a在被点击于释放之间的样式: 元素:active{}
+#注意: 1. a:hover 必须位于 a:link 和 a:visited 之后，a:active 必须位于a:hover之后
+      2. 可靠的顺序: lvha
+
+五、为对象(为元素)选择符
+      1. 元素:before{} : 设置在对象前发生的内容。用来和contents属性一起使用，并且必须定义content属性。
+      2. 元素:after{} : 设置在对象后发生的内容。用来和content一起使用，并且必须定义content属性。
+
+六、选择器的优先级
+      1. !important(无穷大)> 内联 > id(100) >  属性(10) > 标签(1) > 通配符 
+
+
+css 背景、颜色、边框
+一、背景
+      1. background-attachment : 背景图像是否固定或者随页面的其余部分滚动
+      2. background-cokor : 设置元素的背景颜色
+      3. background-image : 把图片设置成背景
+      4. background-position : 设置背景的起始位置
+      5. background-repeat : 设置背景图片是否及如何重复
+
+二、颜色
+一. 颜色值
+      1. color Name : color:red ;
+      2. HEX (十六进制数值表示) : color:#ff0000 ;
+      3. RGB (三原色:红绿蓝)
+      4. RGBA(三原色+不透明[0.0~1.0])
+      5. 透明色 : color:transparent ;
+二. 设置对象的不透明度
+      1. opacity:1 不透明
+      2. opacity:0 完全透明
+
+三、边框
+      1. border-width : 边框宽度
+      2. border-style : 边框样式
+      3. border-color : 边框颜色
+      4. border-radius : 设置圆角边框
+      5. box-shadow : 设置对象阴影
+      6. border-image : 边框背景图片
+
+
+css 字体文本文本装饰
+一. 字体
+      1. font : 符合属性。设置检索对象中的文本特性
+      2. font-style : 设置字体样式
+      3. font-size : 设置字体的大小
+      4. font-weight : 设置字粗细
+      5. font-family : 设置文本的字体名称
+二. 文本
+      1. color : 文本颜色
+      2. text-algin : 文本水平对齐方式
+      3. vertical-algin : 垂直对齐方式
+      4. line-heigth : 行高
+      5. text-transform : 设置文本大小写
+      6. text-indent : 文本缩进
+三. 文本的装饰
+      1. text-decoration : 符合属性。检索或设置对象那个中的文本的装饰
+      2. text-decoration-line : 文本装饰线条的位置
+      3. text-decoration-color : 文本装饰线条的颜色
+      4. text-decoration-style : 文本装饰线条的形状
+      5. text-shadow : 阴影
+
+
+css 列表、表格
+一、列表
+      1. list-style : 符合属性。设置列表项目相关内容
+      2. list-style-image : 列表图像
+      3. list-style-position : 列表标志位置
+      4. list-style-type : 列表类型
+
+
+css 元素分类
+一、块级元素
+      1. 常见的块级元素有 : <div>、<p>、<h1>…<h6>、<ol>、<ul>、<li>、<dl>、<dd>、<dt>、<table>、<tr>、<td>、<address>、<blockquote>、<form>
+      2. 块级元素的特点 : 
+            a : 每个块级元素都从新的一行开始，并且其后的元素也另起一行。
+            b : 元素的高度、宽度、行高及顶和底边距离后可以设置。
+            c : 元素宽度在不设置的情况下，是他本身父级容器的100%（和父元素的宽度一致），除非设定一个宽度。
+      3. 设置display:block可将元素显示为块级元素。如代码就是将内联元素a装换为块级元素，从而使a元素有块级元素的特点。
+            例如:a{display:block;}
+二、内联元素
+      1. 常用的内联元素有 : <a>、<b>、<span>、<br>、<i>、<em>、<strong>、<label>、<q>、<cite>、<code>
+      2. 内联元素的特点 : 
+            a : 和其他元素都在一行上。
+            b : 元素的高度、宽度及顶部边距不可设置
+            c : 元素的宽度就是它包含的文字或图片的宽度，不可改变。
+      3. 内联元素也可以通过代码display:inline将元素设置为内联元素，如下代码就是将块状元素div转换为内联元素，从而是div元素具有内联元素特点。
+            例: div{
+                  display:inline;
+            }
+三、内联块级元素
+      1. 常用的内联块级元素有 : <img>、<input>
+      2. 内联块级元素的特点 :
+            a. 和其他元素都在一行上。
+            b. 元素的高度、宽度、行高及顶和底部边距都可以设置。
+      3. 代码display:inline-block就是将元素设置为内联元素。
+
+
+css 盒子模型-标准盒子
+一、padding : 内边距（内边距在content外，边框内）
+      1. padding : 设置所有边距。
+      2. padding-bottom : 设置底边距。
+      3. padding-left : 是指左边距。
+      4. padding-right : 设置右边距。
+      5. padding-top : 设置上边距。
+二、border : 边框
+      1. border-width : 边框宽度
+      2. border-style : 边框样式
+      3. border-color : 边框颜色
+      4. border-radius : 设置圆角边框
+      5. box-shadow : 设置对象阴影
+      6. border-image : 边框背景图片
+二、margin : 外边距（围绕在content边框的区域就是外边距，外边距默认为透明区域。外边距接受任何长度单位、百分数值）
+      1. margin : 设置所有边框
+      2. margin-bottom : 设置底边距
+      3. margin-left : 设置左边距
+      4. margin-right : 设置右边距
+      5. margin-top : 设置上边距
+
+
+css 怪异盒子
+
+
+css 伸缩盒旧
+一、描述:
+      1. css3 引入了一种新的布局模式---Flexbox布局，即伸缩布局模型（Flexbox），用来提供一个更加有效的方式制定、调整和分布一个容器项目布局，即使它们的大小是未知的或者动态的。
+      2. Flexbox布局可以轻松的实现屏幕和浏览器窗口大小发生变化时，保持元素的相对位置和大小不变。
+二、属性
+      1. box-orient : 伸缩盒对象的子元素的排列方式。
+      2. box-pack : 水平居中
+      3. box-align : 垂直居中
+      4. box-flex : 伸缩盒对象的子元素如何分配其剩余空间。
+      5. box-direction : 伸缩盒对象的子元素的排列是否翻转。
+
+
+css 伸缩盒新
+      1. flex : 复合属性。设置伸缩盒对象的子元素如何分配空间
+      2. flex-grow : 弹性盒的扩展比率，按比例平均分配
+      3. flex-flow : 复合属性。设置伸缩盒对象的子元素排列方式。
+      4. flex-direction : 伸缩盒对象的子元素在父级容器中的位置
+      5. flex-wrap : 设置伸缩盒对象的子元素超出父容器时是否换行
+      6. order : 设置伸缩盒对象的子元素出现的顺序。
+
+
+css 定位
+一、css position属性:
+      1. static : 对象遵循常规流。此时4个定位偏移属性不会被应用。
+      2. relative : 对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。
+      3. absolute : 对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何元素margin折叠。
+      4. fixed : 与absoluey一致，但偏移定位是以窗口为参考。当出现滚动条时，对象会随着滚动。与absoluey一致，但偏移定位是以窗口为参考。当出现滚动条时，对象会随着滚动。
+      #详解:http://blog.163.com/love_heartbreaking/blog/static/124561901201211334714800/
+
+
+css visibility、overflow
+一、visibility
+      1. 设置是否显示对象。与 display:none; 不同，此属性为隐藏的对象保留其占据的物理空间
+      2. 如果希望对象为可视，其父对象也必须是可视的。
+      3. 属性值:
+            visible : 设置对象可视
+            hidden : 设置对象隐藏
+
+二、overflow
+      1. 复合属性。设置对象处理溢出内容的方式。效果等同于overflow-x + overflow-y。
+      2. 如果希望对象为可视，其父对象也必须是可视的。
+      3. 属性值:
+            visible : 对溢出内容不做处理，内容可能超出容器。（默认）
+            hidden : 隐藏溢出容器的内容不出现滚动条。
+            scroll : 隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。
+            auto : 当内容没溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需滚动条。此为body对象和textarea的默认值。
+
+
+
+
+
+
+
+
+
+
+
+
+
